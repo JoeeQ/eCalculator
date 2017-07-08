@@ -3,9 +3,11 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    QApplication app(argc, argv);
+    MainWindow calculator;
+    calculator.setWindowTitle("eCalculator");
+    calculator.setFixedSize(363,420);
+    calculator.show();
 
-    return a.exec();
+    return app.exec();
 }
