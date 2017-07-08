@@ -35,3 +35,5 @@ HEADERS += \
 FORMS += \
         mainwindow.ui \
     dialogwindowhelp.ui
+
+RC_FILE = icon.rc
