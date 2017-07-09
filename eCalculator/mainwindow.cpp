@@ -156,8 +156,11 @@ void MainWindow::on_pushButton_equals_released()
     QString newLabel;
     secondNum = ui->label->text().toDouble();
 
+    QString tmp = " ";
+
     if (ui->pushButton_plus->isChecked())
     {
+        if (firstNum == tmp.toDouble()) firstNum = 0;
         labelNumber = firstNum + secondNum;
         newLabel = QString::number(labelNumber, 'g', 12);
         ui->label->setText(newLabel);
@@ -165,6 +168,7 @@ void MainWindow::on_pushButton_equals_released()
     }
     else if (ui->pushButton_minus->isChecked())
     {
+        if (firstNum == tmp.toDouble()) firstNum = 0;
         labelNumber = firstNum - secondNum;
         newLabel = QString::number(labelNumber, 'g', 12);
         ui->label->setText(newLabel);
